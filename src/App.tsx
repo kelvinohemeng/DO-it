@@ -28,6 +28,10 @@ function App() {
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
+    if (!value.message.trim()) {
+      alert("Please enter a post");
+      return;
+    }
     setTodos((prevTodos) => [...prevTodos, value]);
     setValue({ uid: value.uid + 1, message: "", isCompleted: false });
     // console.log(todos);
@@ -45,6 +49,7 @@ function App() {
           <form onSubmit={handleSubmit} className="w-full flex space-x-2">
             <input
               type="text"
+              required={true}
               placeholder="what do you have planned..."
               value={value.message}
               onChange={handleChange}
