@@ -31,7 +31,7 @@ export const Item = ({ todo, setTodo }: ItemProps) => {
         todo.isCompleted ? "bg-green-400" : "bg-slate-200"
       }`}
     >
-      <p>{todo.message}</p>
+      <p className="max-w-[250px]">{todo.message}</p>
       <div className=" flex gap-3 items-center">
         <div onClick={handleDelete} className=" cursor-pointer">
           {" "}
