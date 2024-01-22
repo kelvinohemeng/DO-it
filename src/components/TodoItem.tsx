@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Todo from "../util/types";
 
 type ItemProps = {
